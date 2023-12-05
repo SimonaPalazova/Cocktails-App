@@ -31,14 +31,11 @@ const userSchema = new mongoose.Schema({
             message: props => `${props.value} must contains only latin letters and digits!`
         },
     },
-    planets:{
+    cocktails:{
         type: mongoose.Types.ObjectId,
-        ref: 'Planet'
+        ref: 'Cocktail'
     },
-    moons:{
-        type: mongoose.Types.ObjectId,
-        ref: 'Planet'
-    }
+    
 });
 
 userSchema.virtual('repeatPasswor')
