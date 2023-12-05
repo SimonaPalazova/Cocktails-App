@@ -1,4 +1,7 @@
 import './header.css';
+
+import { Link } from 'react-router-dom';
+
 export default function Header(){
     return(
         <nav>
@@ -10,24 +13,26 @@ export default function Header(){
     />
     <ul className="nav_links">
       <li>
-        <a href="#">Coctails</a>
+        <Link to="/cocktails">Coctails</Link>
       </li>
       <li>
-        <a href="#">Create</a>
+        <Link to="/create/cocktail">Create</Link>
       </li>
       <li>
-        <a href="#">Profile</a>
+        <Link to="/profile">Profile</Link>
       </li>
     </ul>
-    <a className="btn1" href="#">
+    <Link className="btn1" to="/login">
       <button>Login</button>
-    </a>
-    <a className="btn1" href="#">
-      <button>Logout</button>
-    </a>
-    <a className="btn2" href="#">
+    </Link>
+   
+    <Link className="btn2" to="/register">
       <button>Register</button>
-    </a>
+    </Link> 
+    
+    <Link className="btn1" to="/logout">
+      <button>Logout</button>
+    </Link>
   </header>
 </nav>
     );
