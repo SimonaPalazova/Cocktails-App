@@ -1,5 +1,6 @@
-body {
-    font-family: Arial, sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+ *{
+    font-family: 'Montserrat', sans-serif;
     background-color: #FFC7EA;
     background-size: cover;
     background-position: top;
