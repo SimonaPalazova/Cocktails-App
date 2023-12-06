@@ -11,6 +11,7 @@ import EditCoctail from './components/edit-cocktail/EditCoctail';
 import Profile from './components/profile/profile';
 import EditProfile from './components/edit-profile/EditProfile';
 import Register from './components/register/Register';
+import Login from './components/login/Login';
 
 function App() {
   
@@ -20,6 +21,7 @@ function App() {
     <Routes>
       <Route path="/" element={<Home />}/>
       <Route path="/register" element={<Register />}/>
+      <Route path="/login" element={<Login />}/>
       <Route path="/cocktails" element={<Cocktails />}/>
       <Route path="/create/cocktail" element={<CreateCocktail />}/>
       <Route path="/details" element={<OneCocktail />}/>
