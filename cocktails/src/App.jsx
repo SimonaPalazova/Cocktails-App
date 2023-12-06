@@ -7,6 +7,7 @@ import Home from './components/home/Home';
 import Cocktails from './components/cocktails-list/Cocktails';
 import CreateCocktail from './components/create-cocktail/CreateCocktails';
 import OneCocktail from './components/one-cocktail/OneCocktail';
+import EditCoctail from './components/edit-cocktail/EditCoctail';
 
 function App() {
   
@@ -18,6 +19,7 @@ function App() {
       <Route path="/cocktails" element={<Cocktails />}/>
       <Route path="/create/cocktail" element={<CreateCocktail />}/>
       <Route path="/details" element={<OneCocktail />}/>
+      <Route path="/edit/cocktail" element={<EditCoctail />}/>
     </Routes>
     <Footer />
   </div>
