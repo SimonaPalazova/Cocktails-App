@@ -5,7 +5,7 @@ export default function Home(){
         <div className="container">
   <div className="row">
     <div className="col">
-      <h1>Cocktails</h1>
+      <h1 className='titles'>Cocktails</h1>
       <p>
         Welcome to the page for cocktail lovers, bartenders and people who
         respect alcohol. Here you will find recipes for various cocktails.

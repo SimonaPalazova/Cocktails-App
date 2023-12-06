@@ -25,7 +25,7 @@ background-position: top;
     flex-basis: 50%;
 }
 
-h1{
+.titles h1{
     font-size: 100px;
     color: #F266AB;
     padding-top: 100px;
