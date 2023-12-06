@@ -5,7 +5,7 @@ import Footer from './components/footer/Footer';
 
 import Home from './components/home/Home';
 import Cocktails from './components/cocktails-list/Cocktails';
-import CreateCocktail from './components/create-cocktail/CreateCocktails';
+import CreateCocktail from './components/create-cocktail/CreateCocktail';
 import OneCocktail from './components/one-cocktail/OneCocktail';
 import EditCoctail from './components/edit-cocktail/EditCoctail';
 import Profile from './components/profile/profile';
