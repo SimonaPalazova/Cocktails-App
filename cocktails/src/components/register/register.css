@@ -1,22 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
 
-*{
+  
+  .container-register{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
     margin: 0;
     font-family: 'Montserrat', sans-serif;
     background-color: #FFC7EA;
     background-size: cover;
     background-position: top;
-    height: 100vh;
   }
   
-  .container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-  }
-  
-  .form {
+  .form-register{
     padding: 70px;
     text-align: center;
     max-width: 350px;
@@ -30,13 +27,13 @@
     z-index: +1;
   }
   
-  .form-title {
+  .form-title-register{
     font-size: 28px;
     font-weight: bold;
     color: #F266AB;
   }
   
-  .title-2 {
+  .title-2-register{
     font-size: 24px;
     color: #F266AB;
     margin-top: 10px;
@@ -47,15 +44,15 @@
     text-shadow: 0px 0px 20px #F266AB;
   }
   
-  .input-container {
+  .input-container-register{
     position: relative;
     margin-top: 20px;
   }
   
-  .input-username,
-  .input-mail,
-  .input-pwd,
-  .input-re-pwd {
+  .input-username-register,
+  .input-mail-register,
+  .input-pwd-register,
+  .input-re-pwd-register {
     width: 100%;
     padding: 10px;
     border: 1px solid #ca92eb;
@@ -64,17 +61,17 @@
     transition: border-color 0.3s ease;
   }
   
-  .input-username:focus,
-  .input-mail:focus,
-  .input-pwd:focus,
-  .input-re-pwd:focus {
+  .input-username-register:focus,
+  .input-mail-register:focus,
+  .input-pwd-register:focus,
+  .input-re-pwd-register:focus {
     border-color: #A459D1;
   }
 
-  .input-username:hover,
-  .input-mail:hover,
-  .input-pwd:hover,
-  .input-re-pwd:hover{
+  .input-username-register:hover,
+  .input-mail-register:hover,
+  .input-pwd-register:hover,
+  .input-re-pwd-register:hover{
     background-color: rgba(0, 135, 169, 0.041); /* Change the background color on hover to match your design */
     border: #fff;
     border-style: solid;
@@ -82,7 +79,7 @@
     color:black;
   }
   
-  .input-container span {
+  .input-container-register span {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -90,7 +87,7 @@
     color: #A459D1;
   }
   
-  .submit {
+  .submit-register {
     margin-top: 30px;
     background-color: #A459D1;
     color: #FFC7EA;
@@ -102,7 +99,7 @@
     transition: background-color 0.3s ease;
   }
   
-  .submit:hover {
+  .submit-register:hover {
     background-color: rgba(0, 135, 169, 0.041); /* Change the background color on hover to match your design */
     border: #A459D1;
     border-style: solid;
@@ -110,17 +107,17 @@
     color: #A459D1;
   }
   
-  .signup-link {
+  .signup-link-register {
     color:#fff;
     margin-top: 20px;
     font-size: 14px;
   }
-  .signup-link a:hover{
+  .signup-link-register a:hover{
     font-size: 16px;
     color:#A459D1;
   }
   
-  .up {
+  .up-register {
     color: #A459D1;
     text-decoration: none;
     margin-left: 5px;
