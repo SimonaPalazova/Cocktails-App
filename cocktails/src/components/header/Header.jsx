@@ -6,11 +6,13 @@ export default function Header(){
     return(
         <nav>
   <header>
+  <Link to="/">
     <img
       className="logo"
       src="https://static.vecteezy.com/system/resources/previews/025/313/510/original/coconut-cocktail-with-pink-flowers-and-straw-coconut-drink-in-cartoon-style-illustration-isolated-on-transparent-background-png.png"
       alt="logo"
     />
+    </Link>
     <ul className="nav_links">
       <li>
         <Link to="/cocktails">Coctails</Link>
