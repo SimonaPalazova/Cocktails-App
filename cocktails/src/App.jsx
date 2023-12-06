@@ -9,6 +9,7 @@ import CreateCocktail from './components/create-cocktail/CreateCocktail';
 import OneCocktail from './components/one-cocktail/OneCocktail';
 import EditCoctail from './components/edit-cocktail/EditCoctail';
 import Profile from './components/profile/profile';
+import EditProfile from './components/edit-profile/EditProfile';
 
 function App() {
   
@@ -22,6 +23,7 @@ function App() {
       <Route path="/details" element={<OneCocktail />}/>
       <Route path="/edit/cocktail" element={<EditCoctail />}/>
       <Route path="/profile" element={<Profile />}/>
+      <Route path="/edit/profile" element={<EditProfile />}/>
     </Routes>
     <Footer />
   </div>
