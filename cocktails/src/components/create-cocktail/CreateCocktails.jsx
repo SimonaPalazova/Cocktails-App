@@ -1,53 +1,49 @@
 
 import {} from 'react-router-dom';
-
+import './createCocktail.css'
 export default function CreateCocktail(){
     return(
         <>
-  <meta charSet="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="./createCocktail.css" />
-  <title>Create Cocktail</title>
-  <div className="container">
-    <form className="form" method="post">
-      <div className="form-title">
+  <div className="container-create">
+    <form className="form-create" method="post">
+      <div className="form-create-title">
         <span>Create your</span>
       </div>
-      <div className="title-2">
+      <div className="title-create-form-2">
         <span>Cocktail</span>
       </div>
-      <div className="input-container">
+      <div className="input-container-create">
         <input
-          className="input-name"
+          className="input-name-create"
           type="text"
           placeholder="Enter cocktail name"
         />
       </div>
-      <div className="input-container">
+      <div className="input-container-create">
         <input
-          className="input-img"
+          className="input-img-create"
           type="text"
           placeholder="Enter image url"
         />
         <span> </span>
       </div>
-      <div className="input-container">
+      <div className="input-container-create">
         <textarea
-          className="input-cocktail-ingredients"
+          className="input-cocktail-ingredients-create"
           type="text"
           placeholder="Enter Planet cocktail ingredients"
           defaultValue={""}
         />
       </div>
-      <div className="input-container">
+      <div className="input-container-create">
         <textarea
-          className="input-method-of-preparation"
+          className="input-method-of-preparation-create"
           type="text"
           placeholder="Enter Planet method of preparation"
           defaultValue={""}
         />
       </div>
-      <button type="submit" className="submit">
+      <button type="submit" className="submit-create">
         <span className="sign-text">Create</span>
       </button>
     </form>

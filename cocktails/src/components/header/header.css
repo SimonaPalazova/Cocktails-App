@@ -56,7 +56,8 @@ transition: all 0.3s ease 0s;
 color: #A459D1
 }
 
-button {
+.btn2-header,
+.btn1-header{
     font-weight: 500; 
     font-size: 16px;
     padding: 9px 25px;
@@ -68,7 +69,8 @@ button {
     transition: all 0.3s ease 0s;
 }
 
-button:hover{
+.btn1-header:hover,
+.btn2-header:hover{
     
     background-color: #2cd2e100;
     color: #A459D1;
