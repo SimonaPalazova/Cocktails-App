@@ -12,7 +12,7 @@ import Profile from './components/profile/profile';
 import EditProfile from './components/edit-profile/EditProfile';
 import Register from './components/register/Register';
 import Login from './components/login/Login';
-import AuthContext from './components/contexts/authConext';
+import AuthContext from './contexts/authConext';
 import { useState } from 'react';
 
 function App() {
