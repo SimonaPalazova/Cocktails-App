@@ -15,6 +15,7 @@ export default function Login(){
     <div className="input-container-login">
       <input
         className="input-mail-login"
+        name='email'
         type="email"
         placeholder="Enter email"
       />
@@ -23,6 +24,7 @@ export default function Login(){
     <div className="input-container-login">
       <input
         className="input-pwd-login"
+        name='password'
         type="password"
         placeholder="Enter password"
       />

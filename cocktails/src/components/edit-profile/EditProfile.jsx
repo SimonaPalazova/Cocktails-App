@@ -13,6 +13,7 @@ export default function EditProfile(){
         <input
           className="input-username-edit-profile"
           type="username"
+          name='username'
           placeholder="Enter your new username"
           defaultValue="simona"
         />
@@ -22,6 +23,7 @@ export default function EditProfile(){
         <input
           className="input-mail-edit-profile"
           type="email"
+          name='email'
           placeholder="Enter your new email"
           defaultValue="simona@abv"
         />

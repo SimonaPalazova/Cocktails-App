@@ -1,3 +1,4 @@
+
 import './register.css'
 
 import {Link} from 'react-router-dom';
@@ -15,6 +16,7 @@ export default function Register(){
     <div className="input-container-register">
       <input
         className="input-username-register"
+        name='username'
         type="username"
         placeholder="Enter username"
       />
@@ -22,6 +24,7 @@ export default function Register(){
     <div className="input-container-register">
       <input
         className="input-mail-register"
+        name='email'
         type="email"
         placeholder="Enter email"
       />
@@ -30,6 +33,7 @@ export default function Register(){
     <div className="input-container-register">
       <input
         className="input-pwd-register"
+        name='password'
         type="password"
         placeholder="Enter password"
       />
@@ -37,6 +41,7 @@ export default function Register(){
     <div className="input-container-register">
       <input
         className="input-re-pwd-register"
+        name='re=password'
         type="re-password"
         placeholder="Repeat password"
       />

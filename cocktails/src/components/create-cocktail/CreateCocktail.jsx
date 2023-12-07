@@ -15,6 +15,7 @@ export default function CreateCocktail(){
       <div className="input-container-create">
         <input
           className="input-name-create"
+          name='name'
           type="text"
           placeholder="Enter cocktail name"
         />
@@ -22,6 +23,7 @@ export default function CreateCocktail(){
       <div className="input-container-create">
         <input
           className="input-img-create"
+          name='image'
           type="text"
           placeholder="Enter image url"
         />
@@ -30,6 +32,7 @@ export default function CreateCocktail(){
       <div className="input-container-create">
         <textarea
           className="input-cocktail-ingredients-create"
+          name='cocktail-ingredients'
           type="text"
           placeholder="Enter Planet cocktail ingredients"
           defaultValue={""}
@@ -38,6 +41,7 @@ export default function CreateCocktail(){
       <div className="input-container-create">
         <textarea
           className="input-method-of-preparation-create"
+          name='method-of-preparation'
           type="text"
           placeholder="Enter Planet method of preparation"
           defaultValue={""}

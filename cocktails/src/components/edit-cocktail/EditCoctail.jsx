@@ -12,6 +12,7 @@ export default function EditCoctail(){
       <div className="input-container-edit-cocktail">
         <input
           className="input-name-cocktail-edit"
+          name='name'
           type="text"
           placeholder="Enter cocktail name"
           defaultValue="Name"
@@ -20,6 +21,7 @@ export default function EditCoctail(){
       <div className="input-container-edit-cocktail">
         <input
           className="input-img-edit-cocktail"
+          name='image'
           type="text"
           placeholder="Enter image url"
           defaultValue="imgUrl"
@@ -29,6 +31,7 @@ export default function EditCoctail(){
       <div className="input-container-edit-cocktail">
         <textarea
           className="input-cocktail-ingredients-edit-cocktail"
+          name='cocktail-ingredients'
           type="text"
           placeholder="Enter Cocktail ingredients"
           defaultValue={"Ingredients"}
@@ -37,6 +40,7 @@ export default function EditCoctail(){
       <div className="input-container-edit-cocktail">
         <textarea
           className="input-method-of-preparation-edit-cocktail"
+          name='method-of-preparation'
           type="text"
           placeholder="Enter Cocktail overview"
           defaultValue={"Method of preparation"}
