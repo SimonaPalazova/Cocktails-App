@@ -1,11 +1,20 @@
 import './login.css'
 
-import {Link} from 'react-router-dom';
+import useForm from '../../hooks/useForm'; 
 
-export default function Login(){
+import {Link} from 'react-router-dom';
+import { useContext } from 'react';
+import AuthContext from '../contexts/authConext';
+
+export default function Login() {
+    const {loginSubmithandler } = useContext(AuthContext); 
+    const {values, onChange, onSubmit} = useForm(loginSubmithandler,{
+        email: '',
+        password: '',
+    });
     return(
         <div className="container-login">
-  <form className="form-login" method="post">
+  <form className="form-login" onSubmit={onSubmit}>
     <div className="form-title-login">
       <span>Login to your</span>
     </div>
@@ -18,6 +27,8 @@ export default function Login(){
         name='email'
         type="email"
         placeholder="Enter email"
+        onChange={onChange}
+        value={values.email}
       />
       <span> </span>
     </div>
@@ -27,6 +38,8 @@ export default function Login(){
         name='password'
         type="password"
         placeholder="Enter password"
+        onChange={onChange}
+        value={values.password}
       />
     </div>
     <button type="submit-login" className="submit">

@@ -12,10 +12,19 @@ import Profile from './components/profile/profile';
 import EditProfile from './components/edit-profile/EditProfile';
 import Register from './components/register/Register';
 import Login from './components/login/Login';
+import AuthContext from './components/contexts/authConext';
+import { useState } from 'react';
 
 function App() {
-  
+  const [auth, setAuth]= useState({});
+  console.log(auth,setAuth);
+
+  const loginSubmithandler = (values) =>{
+
+    console.log(values);
+  }
   return (
+    <AuthContext.Provider value={{loginSubmithandler}}>
   <div>
     <Header />
     <Routes>
@@ -31,6 +40,7 @@ function App() {
     </Routes>
     <Footer />
   </div>
+  </AuthContext.Provider>
   )
 }
 
