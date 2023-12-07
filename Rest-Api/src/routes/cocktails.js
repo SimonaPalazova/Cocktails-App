@@ -1,6 +1,6 @@
 const router = require('express').Router();
 const { auth } = require('../utils/auth');
-const { getCocktails, getCocktail, editCocktail, deleteCocktail, getCocktailsByOwner} = require('../controllers/cocktailsController');
+const { getCocktails, getCocktail, editCocktail, deleteCocktail, getCocktailsByOwner, subscribe} = require('../controllers/cocktailsController');
 
 // middleware that is specific to this router
 
@@ -12,5 +12,6 @@ router.get('/:cocktailId', getCocktail);
 router.post('/:cocktailId/edit', auth, editCocktail);
 router.put('/cocktailId/edit', editCocktail)
 router.delete('/:cocktailId/delete', auth, deleteCocktail);
+router.get('/subscribe', auth, subscribe);
 
 module.exports = router;

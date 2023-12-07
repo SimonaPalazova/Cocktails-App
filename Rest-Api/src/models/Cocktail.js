@@ -18,7 +18,11 @@ const cocktailSchema = new mongoose.Schema({
         type: String,
         required: [true],
     },
-   
+    subscribed:{
+        type: mongoose.Types.ObjectId,
+        ref: 'User',
+        default: []
+    },
     owner:{
         type: mongoose.Types.ObjectId,
         ref: 'User',

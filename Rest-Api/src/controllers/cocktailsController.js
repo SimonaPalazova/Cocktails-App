@@ -96,4 +96,19 @@ exports.getCocktailsByOwner = async(req, res,next) => {
     }
 }
 
+exports.subscribe = async(req, res, next) => {
+    const cocktailId = req.params.cocktailId
+    const userId = req.user._id;
+
+    try{
+        const subscribe = await Cocktail.findById(cocktailId)
+        subscribe.subscribed.push(userId)
+
+        res.json(subscribe.subscribed.length);
+    }catch(err){
+        console.log(err);
+        next();
+    }
+}
+
 
