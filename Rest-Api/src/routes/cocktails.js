@@ -12,6 +12,6 @@ router.get('/:cocktailId', getCocktail);
 router.post('/:cocktailId/edit', auth, editCocktail);
 router.put('/cocktailId/edit', editCocktail)
 router.delete('/:cocktailId/delete', auth, deleteCocktail);
-router.get('/subscribe', auth, subscribe);
+router.get('/:cocktailId/subscribe', auth, subscribe);
 
 module.exports = router;
