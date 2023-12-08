@@ -21,7 +21,7 @@ import Login from './components/login/Login';
 function App() {
   const navigate = useNavigate()
   const [auth, setAuth]= useState({});
-  console.log(auth,setAuth);
+  
  
 
   const loginSubmithandler = async (values) =>{
@@ -30,8 +30,16 @@ function App() {
     
     navigate(Path.Cocktails)
   }
+
+  const values = {
+    loginSubmithandler, 
+    username: auth.username,
+    email: auth.email,
+    isAuthenticated: !!auth.username,
+    
+  };
   return (
-    <AuthContext.Provider value={{loginSubmithandler}}>
+    <AuthContext.Provider value={values}>
   <div>
     <Header />
     <Routes>
