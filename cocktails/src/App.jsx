@@ -1,8 +1,11 @@
 import { Routes, Route} from 'react-router-dom';
+import { useState } from 'react';
+
+import * as authService from './services/authService'
+import AuthContext from './contexts/authConext';
 
 import Header from './components/header/Header';
 import Footer from './components/footer/Footer';
-
 import Home from './components/home/Home';
 import Cocktails from './components/cocktails-list/Cocktails';
 import CreateCocktail from './components/create-cocktail/CreateCocktail';
@@ -12,16 +15,18 @@ import Profile from './components/profile/profile';
 import EditProfile from './components/edit-profile/EditProfile';
 import Register from './components/register/Register';
 import Login from './components/login/Login';
-import AuthContext from './contexts/authConext';
-import { useState } from 'react';
+
+
 
 function App() {
   const [auth, setAuth]= useState({});
   console.log(auth,setAuth);
+ 
 
-  const loginSubmithandler = (values) =>{
-
-    console.log(values);
+  const loginSubmithandler = async (values) =>{
+    const result = await authService.login(values.email, values.password)
+    
+    console.log(result);
   }
   return (
     <AuthContext.Provider value={{loginSubmithandler}}>
