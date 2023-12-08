@@ -1,9 +1,7 @@
-import { Routes, Route, useNavigate} from 'react-router-dom';
-import { useState } from 'react';
+import { Routes, Route} from 'react-router-dom';
 
-import * as authService from './services/authService'
 import AuthContext from './contexts/authConext';
-import Path from './paths';
+
 
 import Header from './components/header/Header';
 import Footer from './components/footer/Footer';
@@ -19,27 +17,8 @@ import Login from './components/login/Login';
 
 
 function App() {
-  const navigate = useNavigate()
-  const [auth, setAuth]= useState({});
-  
- 
-
-  const loginSubmithandler = async (values) =>{
-    const result = await authService.login(values.email, values.password)
-    setAuth(result)
-    
-    navigate(Path.Cocktails)
-  }
-
-  const values = {
-    loginSubmithandler, 
-    username: auth.username,
-    email: auth.email,
-    isAuthenticated: !!auth.username,
-    
-  };
   return (
-    <AuthContext.Provider value={values}>
+    <AuthContext.Provider>
   <div>
     <Header />
     <Routes>
