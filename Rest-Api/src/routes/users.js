@@ -3,7 +3,7 @@ const { auth } = require('../utils/auth');
 
 const { register, login, logout, getProfileInfo, editProfileInfo } = require('../controllers/authController');
 
-router.post('/register',register);
+router.post('/register', register);
 router.post('/login',login);
 router.post('/logout', auth ,logout);
 

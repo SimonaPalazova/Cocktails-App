@@ -1,6 +1,6 @@
 import * as request from '../lib/request';
 
-const baseUrl = 'http://localhost:3000/cocktails';
+const baseUrl = 'http://localhost:3000/api/cocktails';
 
 export const getAllCocktail = () => request.get(`${baseUrl}`);
 
