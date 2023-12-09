@@ -10,7 +10,7 @@ const RegisterFormKeys = {
   Username:'username',
   Email:'email',
   Password:'password',
-  RePassword:'re-password',
+  RePassword:'rePassword',
 }
 
 export default function Register(){
@@ -64,7 +64,7 @@ export default function Register(){
     <div className="input-container-register">
       <input
         className="input-re-pwd-register"
-        name='re-password'
+        name='rePassword'
         type="re-password"
         placeholder="Repeat password"
         onChange={onChange}

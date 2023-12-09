@@ -16,35 +16,53 @@ import Profile from './components/profile/profile';
 import EditProfile from './components/edit-profile/EditProfile';
 import Register from './components/register/Register';
 import Login from './components/login/Login';
+import Logout from './components/logout/Logout';
 
 
 function App() {
   const navigate = useNavigate()
-  const [auth, setAuth]= useState({});
+  const [auth, setAuth]= useState(() => {
+    localStorage.removeItem('accessToken');
+
+    return {};
+  });
   
  
 
   const loginSubmithandler = async (values) =>{
     const result = await authService.login(values.email, values.password)
     setAuth(result)
+
+    localStorage.setItem('accessToken', result.accessToken)
+    
+    navigate(Path.Cocktails)
+  }
+
+  const logoutHandler = async () =>{
+    setAuth({})
+    localStorage.removeItem('accessToken')
+    
+    navigate(Path.Home)
+  }
+
+   const registerSubmithandler = async (values) =>{
+    const result = await authService.register(values.username, values.email, values.password, values.rePassword)
+    setAuth(result)
+
+    localStorage.setItem('accessToken', result.accessToken)
+    
     
     navigate(Path.Cocktails)
   }
 
   const values = {
+    logoutHandler,
     loginSubmithandler,
     registerSubmithandler,
     username: auth.username,
     email: auth.email,
-    isAuthenticated: !!auth.username,
+    isAuthenticated: !!auth.accessToken,
   };
-
-   const registerSubmithandler = async (values) =>{
-    const result = await authService.register(values.username, values.email, values.password, values.rePassword)
-    setAuth(result)
-    
-    navigate(Path.Cocktails)
-  }
   return (
     <AuthContext.Provider value={values}>
   <div>
@@ -53,6 +71,7 @@ function App() {
       <Route path="/" element={<Home />}/>
       <Route path="/register" element={<Register />}/>
       <Route path="/login" element={<Login />}/>
+      <Route path='/logout' element={<Logout/>}></Route>
       <Route path="/cocktails" element={<Cocktails />}/>
       <Route path="/create/cocktail" element={<CreateCocktail />}/>
       <Route path="/details" element={<OneCocktail />}/>

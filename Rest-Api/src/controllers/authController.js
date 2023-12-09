@@ -38,7 +38,7 @@ exports.login = async (req, res, next) => {
 exports.register = async(req, res) => {
     try {
 
-        const { username, email, password, repeatPassword } = req.body;
+        const { username, email, password, rePassword } = req.body;
         const user = await User.findOne({ username });
 
         if (user) {
@@ -46,7 +46,7 @@ exports.register = async(req, res) => {
         }
         console.log('hi');
         
-        const createdUser = await User.create({ username, email, password, repeatPassword });
+        const createdUser = await User.create({ username, email, password, rePassword });
         const token = await generationToken(createdUser);
         res.cookie(TOKEN_KEY, token);
 
